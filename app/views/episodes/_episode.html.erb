@@ -1,0 +1,42 @@
+<div class="episode">
+  <div class="side">
+    <div class="number">#<%= episode.position+199 %></div>
+    <div class="published_at"><%= Russian::strftime(episode.published_at,"%d %B %Y") %></div>
+    <div class="comments_count"><%= link_to episode.comments.size.to_s+" "+Russian::p(episode.comments.size, 'коммент','коммента','комментов'), episode_path(:id => episode, :anchor => 'comments') %></div>
+    <% if admin? %>
+    <div class="actions">
+      <p><%= link_to 'Edit', edit_episode_path(episode) %></p>
+      <p><%= link_to 'Destroy', episode, :method => :delete, :confirm => 'Are you sure?' %></p>
+    </div>
+    <% end %>
+  </div>
+  <div class="main">
+    <h2><%= link_to_unless_current h(episode.name), episode %></h2>
+    <% unless episode.embed.empty? %>
+      <%= episode.embed %>
+    <% end %>
+    <div class="description"><%=h episode.description %></div>
+    <% unless episode.tags.empty? %>
+      <div class="tags">
+        Тэги:
+        <% for tag in episode.tags %>
+          <%= link_to h(tag.name), tag %>
+        <% end %>
+      </div>
+    <% end %>
+    <div class="download">
+      <% if episode.mov %>
+        <%= link_to "Скачать", episode.mov.url %>
+        <span class="stats">
+          (<%= number_to_human_size(episode.mov.bytes) %>, <%= episode.duration %>)
+        </span>
+      <% end %>
+    </div>
+    <% if episode.asciicasts? %>
+      <div class="asciicasts">
+        <%= link_to "Read it on ASCIIcasts", "http://asciicasts.com/episodes/#{episode.to_param}" %>
+      </div>
+    <% end %>
+    <%= yield if block_given? %>
+  </div>
+</div>

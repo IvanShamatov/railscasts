@@ -1,0 +1,101 @@
+<div class="section">
+  <ul id="feeds">
+  <strong></strong>
+    <li><a href="http://railscasts.ru/episodes.rss"><%= image_tag 'icons/feed.gif', :alt => 'RSS Feed', :size => '16x16' %> RSS поток</a></li>
+  <!--  <li><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=218282043"><%= image_tag 'icons/itunes.gif', :alt => 'On iTunes', :size => '16x16' %> on iTunes</a></li>-->
+  </ul>
+</div>
+<%= render :partial => 'shared/navigation' %>
+<div class="section">
+  <strong>Друзья:</strong>
+  <div class="sponsor">
+  <a title="ruby on rails форум" href="http://rubyclub.com.ua/"><img border="0" alt="ruby on rails web development" src="/images/ruby-on-rails-development-in-UA.gif" /></a>
+  </div>
+</div>
+<div class="section">
+  <strong>Спонсоры:</strong>
+  <% for sponsor in Sponsor.active.sort_by(&:position) %>
+    <div class="sponsor">
+      <%= link_to image_tag(sponsor.image_url, :alt => h(sponsor.name)), sponsor.site_url %>
+    </div>
+  <% end %>
+</div>
+<div class="section">
+  <strong>Тэги:</strong>
+  <ul id="tags">
+  <% for tag in Tag.find(:all, :order => 'name') %>
+    <li><%= link_to h(tag.name), tag_path(tag) %></li>
+  <% end %>
+  </ul>
+</div>
+<div class="section">
+ <strong>Масс-медиа:</strong><br /> 
+    <%= link_to(image_tag("facebook_icon.png"), "http://www.facebook.com/pages/Railscastsru/139920832688007") %>
+    <%= link_to(image_tag("twitter_icon.png"), "http://twitter.com/railscasts_ru") %>
+    <%= link_to(image_tag("vkontakte_icon.png"), "http://vkontakte.ru/club18662152") %>
+  
+</div>
+<div class="section">
+  <div id="vk_api_transport"></div>
+<script src="http://vkontakte.ru/js/common.js"></script>
+
+<script src="http://durov.at/js/openapi_sample.js"></script>
+
+<script type="text/javascript">
+      window.vkAsyncInit = function() {
+        VK.Observer.subscribe('auth.login', function(response) {
+          window.location = baseURL + '?op=main&page=auth';
+        });
+        VK.Observer.subscribe('auth.logout', function() {
+          //console.log('logout');
+        });
+        VK.Observer.subscribe('auth.statusChange', function(response) {
+          //console.log('statusChange');
+        });
+        VK.Observer.subscribe('auth.sessionChange', function(r) {
+          //console.log('sessionChange');
+        });
+        VK.init({
+          apiId: 1934677,
+          nameTransportPath: '/xd_receiver.html'
+        });
+        VK.UI.button('vk_login');
+
+        function(){
+          var el = document.createElement("script");
+          el.type = "text/javascript";
+          el.charset = "windows-1251";
+          el.src = "http://vkontakte.ru/js/api/openapi.js";
+          el.async = true;
+          document.getElementById("vk_api_transport").appendChild(el);
+        }}
+</script>
+<div id="vk_login" style="margin: 0 auto 20px auto;" onclick="doLogin();"></div>
+</div>
+</div>
+
+<script type="text/javascript"><!--
+reformal_wdg_domain    = "railscasts";
+reformal_wdg_mode    = 0;
+reformal_wdg_title   = "Railscasts - бесплатные скринкасты по Ruby on Rails";
+reformal_wdg_ltitle  = "";
+reformal_wdg_lfont   = "";
+reformal_wdg_lsize   = "";
+reformal_wdg_color   = "#1b98f2";
+reformal_wdg_bcolor  = "#516683";
+reformal_wdg_tcolor  = "#FFFFFF";
+reformal_wdg_align   = "left";
+reformal_wdg_charset = "utf-8";
+reformal_wdg_waction = 0;
+reformal_wdg_vcolor  = "#9FCE54";
+reformal_wdg_cmline  = "#E0E0E0";
+reformal_wdg_glcolor  = "#105895"
+reformal_wdg_tbcolor  = "#FFFFFF"
+//-->
+</script>
+
+<script type="text/javascript" language="JavaScript" src="http://widget.reformal.ru/tab5.js"></script><noscript><a href="http://railscasts.reformal.ru">Railscasts - бесплатные скринкасты по Ruby on Rails feedback </a> <a href="http://reformal.ru"><img src="http://reformal.ru/i/logo.gif" /></a></noscript>
+  </body>
+
+</div>
+

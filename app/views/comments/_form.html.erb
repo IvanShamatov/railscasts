@@ -1,0 +1,42 @@
+<% form_for @comment do |f| %>
+  <%= error_messages_for :comment %>
+  <noscript><p>Для отправки комментариев необходимо включить JavaScript.</p></noscript>
+  <div>
+    <%= f.hidden_field :episode_id %>
+    <%= enkode hidden_field_tag(:spam_key, APP_CONFIG['spam_key']) %>
+  </div>
+  <% if current_spam_question %>
+    <p id="spam_question">
+      <strong><%=h current_spam_question.question %></strong><br />
+      <%= text_field_tag :spam_answer %>
+    </p>
+  <% end %>
+  <p id="fake_email">
+    <%= label_tag :email, 'Поддельный email' %> <span class="info">(ПРОПУСТИТЕ ЭТО ПОЛЕ)</span><br />
+    <%= text_field_tag :email %>
+  </p>
+  <p>
+    <%= f.label :name, 'Имя/ник', :class => 'required' %> <span class="info">(необходимо)</span><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %> <span class="info">(не будет отображаться)</span><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :site_url, 'Ваш сайт' %><br />
+    <%= f.text_field :site_url %>
+  </p>
+  <p>
+    <%= f.label :content, 'Комментарий', :class => 'required' %>
+    <span class="info">
+      (используйте <a href="http://pastie.org" target="_blank">pastie</a>
+      или <a href="http://gist.github.com" target="_blank">gist</a> для вставки кода)
+    </span><br />
+    <%= f.text_area :content, :rows => '12', :cols => 35 %>
+  </p>
+  <p>
+    <%= f.submit "Просмотреть", :name => 'preview_button' %>
+    <%= f.submit "Отправить" %>
+  </p>
+<% end %>
