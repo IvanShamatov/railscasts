@@ -7,4 +7,8 @@ class Tag < ActiveRecord::Base
       Tag.find_or_create_by_name(name)
     end
   end
+
+  def to_param
+    "#{self.id}-#{self.title.gsub(/[\W]/,'_')}"
+  end
 end
