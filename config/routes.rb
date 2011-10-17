@@ -9,6 +9,8 @@ ActionController::Routing::Routes.draw do |map|
     info.feeds 'feeds', :action => 'feeds'
     info.give_back 'give_back', :action => 'give_back'
     info.news 'news', :action => 'news'
+    info.vacancy 'vacancy', :action => 'vacancy'
+    info.railsclub 'railsclub', :action => 'railsclub'
   end
   
   map.login 'login', :controller => 'sessions', :action => 'new'

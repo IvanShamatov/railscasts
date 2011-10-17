@@ -1,13 +1,11 @@
 <div class="section">
   <ul id="feeds">
   <strong></strong>
-    <li><a href="http://railscasts.ru/episodes.rss"><%= image_tag 'icons/feed.gif', :alt => 'RSS Feed', :size => '16x16' %> RSS поток</a></li>
   <!--  <li><a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=218282043"><%= image_tag 'icons/itunes.gif', :alt => 'On iTunes', :size => '16x16' %> on iTunes</a></li>-->
   </ul>
 </div>
-<div class="section">
-<strong><%= link_to "Внимание!", news_path %></strong>
-</div>
+<br />
+<br />
 <%= render :partial => 'shared/navigation' %>
 <div class="section">
   <strong>Друзья:</strong>
@@ -19,7 +17,7 @@
   <strong>Спонсоры:</strong>
   <% for sponsor in Sponsor.active.sort_by(&:position) %>
     <div class="sponsor">
-      <%= link_to image_tag(sponsor.image_url, :alt => h(sponsor.name)), sponsor.site_url %>
+      <%= link_to image_tag(sponsor.image_url, :border=>0, :alt => h(sponsor.name)), sponsor.site_url %>
     </div>
   <% end %>
 </div>

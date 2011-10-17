@@ -6,5 +6,3 @@ config/*.sphinx.conf
 db/*.sqlite3
 db/sphinx
 public/assets
-public/video/*
-public/video

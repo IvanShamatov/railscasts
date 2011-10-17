@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://railscasts.ru/</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/16-advanced-queries-in-rails-3</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/1-rails_3_0</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/3-active_record</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/15-a-b-testing-with-a-bingo</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/2-plugins</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/5-views</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/11-%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD%D1%8B</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/12-%D0%B2%D0%B8%D0%B4%D1%8B</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/14-calendars</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/17-forms</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/18-%D1%84%D0%BE%D1%80%D0%BC%D1%8B</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/13-refactoring-and-dynamic-delegator</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/19-refactoring</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/20-%D1%80%D0%B5%D1%84%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B3</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/12-validations-in-rails-3</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/11-customizing-devise</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/9-authentication</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/10-%D0%B0%D1%83%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/10-introducing-devise</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/9-erb-blocks-in-rails-3</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/8-syntax-highlighting</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/7-action-mailer-in-rails-3</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/8-mailing</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/13-%D0%BF%D0%BE%D1%87%D1%82%D0%B0</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes?page=2</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/archive</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/about</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/comments</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/7-ajax</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/4-routing</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/6-security</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/14-%D0%B0%D1%8F%D0%BA%D1%81</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/15-%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D1%8C</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/16-%D0%BC%D0%B0%D1%80%D1%88%D1%80%D1%83%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/give_back</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/3-active-record-queries-in-rails-3</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/6-unobtrusive-javascript</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/5-xss-protection-in-rails-3</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/4-rails-3</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/1-rails_3_0?page=2</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/2-bundler</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes/1-rails-3-beta-and-rvm</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/episodes?page=1</loc>
+</url>
+<url>
+  <loc>http://railscasts.ru/tags/1-rails_3_0?page=1</loc>
+</url>
+</urlset>
